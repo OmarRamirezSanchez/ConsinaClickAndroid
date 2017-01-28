@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">CocinaClick</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="email_user">Correo</string>
+    <string name="password_user">Contraseña</string>
+    <string name="acerca_de">Acerca de</string>
+    <string name="informacion">Información</string>
+    <string name="cerrar_sesion">Cerrar Sesión</string>
+    <string name="welcom">Bienvenido a CocinaClick</string>
+    <string name="leyenda">CocinaClick es una aplicación desarrolada por Bambú Mobile</string>
+    <string name="registrar">Registrar</string>
+    <string name="inicia_sesion">Iniciar Sesión</string>
+    <string name="inicar_sesion_ayuda">Por favor espera unos segundos</string>
+    <string name="manager">manager</string>
+    <string name="rechazar">Rechazar</string>
+    <string name="aceptar">Aceptar</string>
+
+    <string name="dato_cuenta">Datos de la cuentas</string>
+    <string name="error_contraseña">La contraseña no corresponde al correo</string>
+    
+    <string name="detalles_titulo">Detalles de la Orden</string>
+    <string name="notas">Notas</string>
+    <string name="mi_menu">Mi menú</string>
+    <string name="vacio">Sin Ordenes</string>
+    <string name="aler_aut">Autentificando</string>
+    <string name="time_entre">Tiempo de Entrega</string>
+    <string name="alert_empy_ordenes_title">Ordenes</string>
+    <string name="alert_emoy_ordenes_body">No tienes órdenes pendientes</string>
+    <string name="terminos_condiciones">Terminos y condiciones</string>
+    <string name="ayuda">¿Necesitas ayuda?</string>
+
+    <!-- Errores y Alertas -->
+
+    <string name="act_pedido">Actualizando pedidos</string>
+    <string name="pedido_actualizado_error">Ese pedido ya fue procesado</string>
+    <string name="pass_clear">Por favor ingresa una contraseña</string>
+    <string name="mail_clear">Ingresa una correo</string>
+    <string name="mail_format">Ingresa un correo valido</string>
+
+    <string name="datos_invalidos_titulo">Datos Incorrectos</string>
+    <string name="datos_invalidos_cuerpo">La contraseña no corresponde al correo</string>
+    <string name="correo_invalido_titulo">Correo Invalido</string>
+    <string name="correo_invalido_cuerpo">El correo no se encuentra registrado</string>
+    <string name="usuario_no_verificado">La cuenta no se encuentra verificado</string>
+    <string name="conexion_fallida_titulo">Upss</string>
+    <string name="conexion_fallida_cuerpo">Lo sentimos no pudimos establecer conexion con el servidor intentalo de nuevo mas tarde</string>
+
+    <!--- URLS -->
+    <string name="url_base">https://cocina-click.herokuapp.com/</string>
+    <string name="url_login">api?token=</string>
+    <string name="url_pedidos">api/orders.json</string>
+    <string name="url_update_pedido">api/aceptar/</string>
+    <string name="url_menus"></string>
+
+    <string name="url_registrarse">http://cocinaclick.herokuapp.com/</string>
+    <string name="url_ayuda">http://cocinaclick.herokuapp.com/</string>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#F4339A</color>
+    <color name="primaryDarck">#CB016D</color>
+
+    <color name="accent">#053D56</color>
+    <color name="tabsScrollColor">#03A9F4</color>
+
+    <color name="rippelColor">#FFFFFF</color>
+    <color name="bg_color">#757575</color>
+
+    <color name="input_color">#000</color>
+    <color name="darck_gray">#424744</color>
+    <color name="light_gray">#757575</color>
+    <color name="orage_ligh">#FF9800</color>
+    <color name="blue_ligth">#03A9F4</color>
+    <color name="green_ligth">#388E3C</color>
+    <color name="red_ligth">#D32F2F</color>
+
+</resources>

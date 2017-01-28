@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="tiempo_cambio_de_vista">400</integer>
+    <integer name="ripple_duration">200</integer>
+    <integer name="transicion">300</integer>
+</resources>

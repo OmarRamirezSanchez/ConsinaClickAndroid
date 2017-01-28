@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Cominda numero algo"
+        android:id="@+id/nombre_platillo"
+        android:gravity="left|center"
+        android:layout_weight="1"
+        android:paddingLeft="20dp"
+        android:textColor="@android:color/black" />
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/platillo_disponible"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:layout_gravity="right"
+        android:layout_weight="4"
+        android:gravity="center"
+        android:checked="true" />
+</LinearLayout>
