@@ -1,8 +1,12 @@
 package mobile.bambu.consinaclick;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Base64;
@@ -56,9 +60,7 @@ public class FragmenMainManager extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_fragment);
         instanceView(savedInstanceState);
-
     }
-
     private void instanceView(Bundle savedInstanceState) {
         this.usuario = loadUser();
         Log.e("FragmentManager", "Usuario 2 : " + usuario.toString());

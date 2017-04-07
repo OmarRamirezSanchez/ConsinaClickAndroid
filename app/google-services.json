@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "832564322932",
+    "firebase_url": "https://cocinaclick-1e214.firebaseio.com",
+    "project_id": "cocinaclick-1e214",
+    "storage_bucket": "cocinaclick-1e214.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:832564322932:android:c3440dabf040defb",
+        "android_client_info": {
+          "package_name": "mobile.bambu.consinaclick"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "832564322932-dbl0l69srjb89n2tltpp9630a7cdms7v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOyV-zJp31cY5Ji2AOXlrpJWF8Wmly_o0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

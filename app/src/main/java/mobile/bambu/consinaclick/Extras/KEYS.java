@@ -12,4 +12,6 @@ public class KEYS {
     public static String KEY_PUESTO="KEY_PUESTO";
     public static String KEY_PEDIDO="KEY_PEDIDO";
     public static String KEY_USER_DABE="KEY_PEDIDO_DABE";
+    public static String KEY_UPDATE_ORDERS= "KEY_UPDATE_ORDERS";
+
 }

@@ -1,9 +1,15 @@
 package mobile.bambu.consinaclick;
 
 import android.app.Activity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Looper;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarActivity;
@@ -67,6 +73,24 @@ public class ListaOrdenes extends Fragment {
         return view;
     }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        LocalBroadcastManager.getInstance(getContext()).registerReceiver(mOrderReceiver, new IntentFilter(KEYS.KEY_UPDATE_ORDERS));
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        LocalBroadcastManager.getInstance(getContext()).unregisterReceiver(mOrderReceiver);
+    }
+
+    private BroadcastReceiver mOrderReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            cargarListaDeOrdenes();
+        }
+    };
    public void suportToolBar(){
         Toolbar toolbar= (Toolbar)getActivity().findViewById(R.id.tool_bar_custom);
         TextView titleBat = (TextView) toolbar.findViewById(R.id.toolbar_title);

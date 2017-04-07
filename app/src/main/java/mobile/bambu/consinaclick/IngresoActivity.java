@@ -29,6 +29,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.gcm.GCMRegistrar;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 
 import org.json.JSONObject;
@@ -135,6 +136,8 @@ public class IngresoActivity extends ActionBarActivity implements View.OnClickLi
     public void transicion_Lista_Perdidos(Usuario usuario) {
         Intent lista_pedidos = new Intent(getApplicationContext(), FragmenMainManager.class);
         lista_pedidos.putExtra("Usuario",usuario);
+        //TODO Descoment for sucribe a Restaurant
+       // FirebaseMessaging.getInstance().subscribeToTopic(usuario.getId_restaurante());
         startActivity(lista_pedidos);
         finish();
     }
@@ -207,8 +210,8 @@ public class IngresoActivity extends ActionBarActivity implements View.OnClickLi
                                 case 1:
                                      usuario = new Usuario(correo.getText().toString(),
                                              password.getText().toString(),
-                                             persona.getString("restaurant_id"),
-                                            persona.getString("puesto"));
+                                            persona.getString("puesto"),
+                                             persona.getString("restaurant_id"));
                                     saveUser(usuario);
                                     transicion_Lista_Perdidos(usuario);
 
@@ -217,10 +220,10 @@ public class IngresoActivity extends ActionBarActivity implements View.OnClickLi
                                     instanceAlert(getString(R.string.correo_invalido_titulo),getString(R.string.correo_invalido_cuerpo));
                                     break;
                                 case 3:
-                                     usuario = new Usuario(persona.getString("restaurant_id"),
-                                                    persona.getString("puesto"),
-                                                    correo.getText().toString(),
-                                                    password.getText().toString());
+                                    usuario = new Usuario(correo.getText().toString(),
+                                            password.getText().toString(),
+                                            persona.getString("puesto"),
+                                            persona.getString("restaurant_id"));
                                     saveUser(usuario);
                                     transicion_Lista_Perdidos(usuario);
                                     break;
