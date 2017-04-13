@@ -14,6 +14,7 @@ public class OrderIDService extends FirebaseInstanceIdService {
     private static final String TAG = "FirebaseIDService";
 
     @Override
+    @android.support.annotation.WorkerThread
     public void onTokenRefresh() {
         // Get updated InstanceID token.
         String refreshedToken = FirebaseInstanceId.getInstance().getToken();
@@ -33,5 +34,6 @@ public class OrderIDService extends FirebaseInstanceIdService {
      */
     private void sendRegistrationToServer(String token) {
         // Add custom implementation, as needed.
+        Log.d(TAG, "Refreshed token: sendRegistrationToServer :" + token);
     }
 }

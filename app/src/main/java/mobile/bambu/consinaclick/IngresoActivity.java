@@ -137,7 +137,7 @@ public class IngresoActivity extends ActionBarActivity implements View.OnClickLi
         Intent lista_pedidos = new Intent(getApplicationContext(), FragmenMainManager.class);
         lista_pedidos.putExtra("Usuario",usuario);
         //TODO Descoment for sucribe a Restaurant
-       // FirebaseMessaging.getInstance().subscribeToTopic(usuario.getId_restaurante());
+        FirebaseMessaging.getInstance().subscribeToTopic(usuario.getId_restaurante());
         startActivity(lista_pedidos);
         finish();
     }

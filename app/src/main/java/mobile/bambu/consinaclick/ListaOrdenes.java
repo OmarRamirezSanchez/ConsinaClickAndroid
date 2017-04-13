@@ -45,6 +45,7 @@ import mobile.bambu.consinaclick.Extras.KEYS;
 import mobile.bambu.consinaclick.Modelo.Pedido;
 import mobile.bambu.consinaclick.Modelo.PedidosArrayList;
 import mobile.bambu.consinaclick.Modelo.Usuario;
+import mobile.bambu.consinaclick.Networck.GlobalNetwork;
 import mobile.bambu.consinaclick.Tabs_Class.SlidingTabLayout;
 import mobile.bambu.consinaclick.Tabs_Class.Tab_Orden;
 import mobile.bambu.consinaclick.Tabs_Class.ViewPagerAdapter;
@@ -70,6 +71,9 @@ public class ListaOrdenes extends Fragment {
         mainManager.usuario.setPedidos(new PedidosArrayList());
         cargarListaDeOrdenes();
         suportToolBar();
+        GlobalNetwork.getInstance().setContext(getContext());
+        GlobalNetwork.getInstance().sucribeToRestaurant(mainManager.usuario.id_restaurante);
+
         return view;
     }
 
