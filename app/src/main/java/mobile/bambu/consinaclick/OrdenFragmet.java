@@ -111,6 +111,7 @@ public class OrdenFragmet extends Fragment implements View.OnClickListener, Time
                 tpd.setMinTime(now.get(Calendar.HOUR_OF_DAY), now.get(Calendar.MINUTE), now.get(Calendar.SECOND));
                 tpd.setOnTimeSetListener(this);
                 tpd.show(mainManager.getFragmentManager(), "TimePiker");
+
                 break;
             case R.id.rpv_rechazar:
                 updateEstado(pedido.id, "3", "&de_time=0");
@@ -329,8 +330,9 @@ public class OrdenFragmet extends Fragment implements View.OnClickListener, Time
                         @Override
                         public void onResponse(String response) {
                             Log.wtf("UpdateEstado", "status : " + response);
+                            maDiag.dismiss();
                             try {
-                                maDiag.dismiss();
+
                                 JSONObject estado = new JSONObject(response);
 
                                 switch (estado.getInt("status")) {
@@ -358,6 +360,7 @@ public class OrdenFragmet extends Fragment implements View.OnClickListener, Time
             ) {
                 @Override
                 public Map<String, String> getHeaders() throws AuthFailureError {
+                    maDiag.dismiss();
                     Map<String, String> params = new HashMap<String, String>();
                     params.put(
                             "Authorization",
@@ -370,6 +373,7 @@ public class OrdenFragmet extends Fragment implements View.OnClickListener, Time
             };
             queue.add(postRequest);
         } catch (Exception e) {
+            maDiag.dismiss();
             Log.e("ERROR", "Murio");
         }
     }
@@ -379,14 +383,8 @@ public class OrdenFragmet extends Fragment implements View.OnClickListener, Time
 
         Calendar now = Calendar.getInstance();
         int minutos = ( ((hourOfDay * 60) + minute) - ((now.get(Calendar.HOUR_OF_DAY) * 60) + now.get(Calendar.MINUTE)));
-
         Log.e("Actualizado", "Operación : " + (now.get(Calendar.HOUR_OF_DAY) * 60)+" + "+(now.get(Calendar.MINUTE)) +" : "+((hourOfDay * 60) + minute));
         Log.e("Actualizado", "Operación : " + minutos);
-        if (minutos > 1) {
-            Log.e("Actualizado", "Actualizando Estado");
-            updateEstado(pedido.id, "2", "&de_time=" + minutos);
-        } else {
-            showErrorAlert("No puedes ingresar horas menores a la acutual");
-        }
+        updateEstado(pedido.id, "2", "&de_time=" + minutos);
     }
 }
